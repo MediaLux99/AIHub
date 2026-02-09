@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub - مركز الذكاء الاصطناعي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Adsterra Smart Banner Script -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '3dae9e0c014f61d51920d78ee140252d',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://www.effectivegatecpm.com/3dae9e0c014f61d51920d78ee140252d/invoke.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --neon-blue: #00f2fe;
+            --neon-purple: #764ba2;
+            --neon-pink: #f5576c;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            overflow-x: hidden;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        body.light-mode {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2c3e50;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideDown 0.5s ease;
+        }
+
+        .light-mode .header {
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .header {
+            background: rgba(15, 12, 41, 0.8);
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            animation: rotate3d 3s ease-in-out infinite;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.8rem 3rem 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            background: rgba(255, 255, 255, 0.1);
+            color: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(180deg) scale(1.1);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        /* Articles Navigation Bar */
+        .articles-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .article-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            background: rgba(255, 255, 255, 0.05);
+            color: inherit;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .article-btn:hover::before {
+            opacity: 1;
+        }
+
+        .article-btn:hover {
+            transform: translateY(-3px);
+            border-color: var(--neon-purple);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .article-icon, .article-title {
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-icon {
+            font-size: 1.3rem;
+        }
+
+        /* Articles Section */
+        .articles-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .close-article {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--secondary-gradient);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 2001;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.5);
+        }
+
+        .close-article:hover {
+            transform: rotate(90deg) scale(1.1);
+            box-shadow: 0 6px 25px rgba(245, 87, 108, 0.7);
+        }
+
+        .article-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.5s ease;
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .article-content h2 {
+            color: var(--neon-blue);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-right: 1rem;
+            border-right: 4px solid var(--neon-blue);
+        }
+
+        .article-content h3 {
+            color: var(--neon-pink);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        .article-content p {
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-right: 2rem;
+        }
+
+        .article-content li {
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .article-content strong {
+            color: var(--neon-blue);
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: rgba(102, 126, 234, 0.1);
+            border-right: 4px solid var(--neon-purple);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .sidebar h2 {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        /* Categories */
+        .categories {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            animation: fadeInUp 0.7s ease;
+        }
+
+        .category-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            color: inherit;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary-gradient);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* AI Cards Grid */
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .ai-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .ai-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--neon-blue), transparent);
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ai-card:hover::before {
+            opacity: 0.3;
+        }
+
+        .ai-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 242, 254, 0.3);
+            border-color: var(--neon-blue);
+        }
+
+        .ai-card-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ai-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .ai-card:hover .ai-icon {
+            transform: rotateY(360deg);
+        }
+
+        .ai-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .ai-card p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Detail Page */
+        .detail-page {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .detail-page.active {
+            display: block;
+        }
+
+        .detail-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .detail-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 30px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .detail-info h1 {
+            font-size: 2.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .detail-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-content h3 {
+            color: var(--neon-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .detail-content h4 {
+            color: var(--neon-purple);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        #detailArticle h3 {
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.6rem;
+            margin-top: 2rem;
+        }
+
+        #detailArticle h4 {
+            color: var(--neon-blue);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+        }
+
+        #detailArticle p {
+            margin: 1rem 0;
+            line-height: 1.9;
+            opacity: 0.9;
+        }
+
+        #detailArticle strong {
+            color: var(--neon-pink);
+            font-weight: 700;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border-right: 3px solid var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+
+        .features-list li:hover {
+            transform: translateX(-10px);
+            background: rgba(0, 242, 254, 0.1);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-secondary {
+            background: var(--secondary-gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.1);
+            color: inherit;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate3d {
+            0%, 100% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg); }
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.8)); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            .search-bar {
+                max-width: 100%;
+            }
+
+            .ai-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .detail-info h1 {
+                font-size: 2rem;
+            }
+
+            .articles-nav {
+                padding: 0.8rem;
+                gap: 0.5rem;
+            }
+
+            .article-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .article-icon {
+                font-size: 1.1rem;
+            }
+
+            .article-title {
+                display: none;
+            }
+
+            .article-btn:hover .article-title {
+                display: inline;
+            }
+
+            .close-article {
+                top: 1rem;
+                left: 1rem;
+                width: 45px;
+                height: 45px;
+            }
+
+            .article-container {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            .article-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .article-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .article-content p {
+                font-size: 1rem;
+            }
+            
+            /* Hide desktop ads on mobile */
+            .adsterra-desktop {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-btn {
+                padding: 0.5rem 0.8rem;
+            }
+
+            .article-icon {
+                font-size: 1.3rem;
+            }
+        }
+
+
+        /* Adsterra Ads Styling */
+        .adsterra-container {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            margin: 1rem auto;
+            overflow: hidden;
+        }
+
+        @media (min-width: 769px) {
+            .adsterra-mobile {
+                display: none !important;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gradient);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+                <span>AI Hub</span>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="ابحث عن أدوات الذكاء الاصطناعي..." id="searchInput">
+            </div>
+            
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="shareWebsite()">
+                    <span style="position: relative; z-index: 1;">📤 مشاركة</span>
+                </button>
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <span id="themeIcon">🌙</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Articles Navigation Bar -->
+        <div class="articles-nav">
+            <button class="article-btn" onclick="showArticle('genai')">
+                <span class="article-icon">🤖</span>
+                <span class="article-title">الذكاء التوليدي</span>
+            </button>
+            <button class="article-btn" onclick="showArticle('tools')">
+                <span class="article-icon">🎨</span>
+                <span class="article-title">أدوات للمصممين</span>
+            </button>
+            <button class="article-btn" onclick="showArticle('future')">
+                <span class="article-icon">🚀</span>
+                <span class="article-title">مستقبل العمل</span>
+            </button>
+            <button class="article-btn" onclick="showArticle('ethics')">
+                <span class="article-icon">⚖️</span>
+                <span class="article-title">الأخلاقيات</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Articles Section -->
+    <div id="articlesSection" class="articles-section" style="display: none;">
+        <div class="article-container">
+            <button class="close-article" onclick="closeArticle()">✕</button>
+            <div id="articleContent"></div>
+        </div>
+        </div>
+    </header>
+
+    <!-- Adsterra Banner Ad Container - Desktop -->
+    <div class="adsterra-desktop" style="text-align: center; padding: 1.5rem 0; background: rgba(255, 255, 255, 0.02);">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '3dae9e0c014f61d51920d78ee140252d',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="https://www.effectivegatecpm.com/3dae9e0c014f61d51920d78ee140252d/invoke.js"></script>
+    </div>
+    
+    <!-- Adsterra Banner Ad Container - Mobile -->
+    <div class="adsterra-mobile" style="text-align: center; padding: 1rem 0; background: rgba(255, 255, 255, 0.02);">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '3dae9e0c014f61d51920d78ee140252d',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="https://www.effectivegatecpm.com/3dae9e0c014f61d51920d78ee140252d/invoke.js"></script>
+    </div>
+
+
+    <div class="container">
+        <!-- Main Page -->
+        <div id="mainPage">
+            <!-- Sidebar Info -->
+            <div class="sidebar">
+                <h2>🌟 مرحبًا بك في AI Hub</h2>
+                <p>منصتك المركزية لاكتشاف أقوى وأحدث أدوات الذكاء الاصطناعي. استكشف مئات الأدوات المتخصصة في مجالات متنوعة من الدردشة الذكية إلى توليد المحتوى والإبداع الفني.</p>
+                <p style="margin-top: 1rem; opacity: 0.8;">💡 الذكاء الاصطناعي يُحدث ثورة في طريقة عملنا وإبداعنا. اختر الأداة المناسبة لاحتياجاتك وابدأ رحلتك نحو المستقبل!</p>
+            </div>
+
+            <!-- Categories -->
+            <div class="categories">
+                <button class="category-btn active" data-category="all">الكل</button>
+                <button class="category-btn" data-category="chat">روبوتات الدردشة</button>
+                <button class="category-btn" data-category="content">مولدات المحتوى</button>
+                <button class="category-btn" data-category="learning">التعلم</button>
+                <button class="category-btn" data-category="creative">الإبداع</button>
+                <button class="category-btn" data-category="analytics">التحليلات</button>
+            </div>
+
+            <!-- AI Cards Grid -->
+            <div class="ai-grid" id="aiGrid">
+                <!-- Cards will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Detail Page -->
+        <div id="detailPage" class="detail-page">
+            <button class="btn btn-back" onclick="showMainPage()">
+                <span style="position: relative; z-index: 1;">← العودة للرئيسية</span>
+            </button>
+            
+            <div class="detail-header">
+                <div class="detail-icon" id="detailIcon">🤖</div>
+                <div class="detail-info">
+                    <h1 id="detailTitle">اسم الأداة</h1>
+                    <p id="detailShortDesc">وصف مختصر</p>
+                </div>
+            </div>
+
+            <div class="detail-content">
+                <h3>📋 نبذة تفصيلية</h3>
+                <p id="detailDescription"></p>
+
+                <h3>✨ المميزات الرئيسية</h3>
+                <ul class="features-list" id="detailFeatures"></ul>
+
+                <h3>💡 كيفية الاستفادة</h3>
+                <p id="detailHowTo"></p>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary btn-large" id="detailVisitBtn">
+                        <span style="position: relative; z-index: 1;">🌐 زيارة الموقع</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large" id="detailDownloadBtn" style="display: none;">
+                        <span style="position: relative; z-index: 1;">📱 تحميل التطبيق</span>
+                    </button>
+                </div>
+
+                <h3 style="margin-top: 2rem;">📖 مقال تعليمي شامل</h3>
+                <div id="detailArticle" style="line-height: 1.8; margin-top: 1rem;"></div>
+
+                <!-- Adsterra In-Article Ad -->
+                <div style="text-align: center; padding: 2rem 0; background: rgba(255, 255, 255, 0.02); border-radius: 15px; margin: 2rem 0;">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '3dae9e0c014f61d51920d78ee140252d',
+                            'format' : 'iframe',
+                            'height' : 90,
+                            'width' : 728,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="https://www.effectivegatecpm.com/3dae9e0c014f61d51920d78ee140252d/invoke.js"></script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Adsterra Bottom Banner - Desktop -->
+    <div class="adsterra-desktop" style="text-align: center; padding: 2rem 0; background: rgba(255, 255, 255, 0.02); margin-top: 2rem;">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '3dae9e0c014f61d51920d78ee140252d',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="https://www.effectivegatecpm.com/3dae9e0c014f61d51920d78ee140252d/invoke.js"></script>
+    </div>
+    
+    <!-- Adsterra Bottom Banner - Mobile -->
+    <div class="adsterra-mobile" style="text-align: center; padding: 1.5rem 0; background: rgba(255, 255, 255, 0.02); margin-top: 1.5rem;">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '3dae9e0c014f61d51920d78ee140252d',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="https://www.effectivegatecpm.com/3dae9e0c014f61d51920d78ee140252d/invoke.js"></script>
+    </div>
+
+
+
+    <script>
+        // AI Tools Data
+        const aiTools = [
+            {
+                name: 'ChatGPT',
+                icon: '🤖',
+                category: 'chat',
+                popular: true,
+                shortDesc: 'روبوت محادثة ذكي من OpenAI',
+                description: 'ChatGPT هو نموذج لغوي متقدم طورته OpenAI، يمكنه المحادثة الطبيعية والإجابة على الأسئلة وكتابة المحتوى وحل المشكلات البرمجية والكثير.',
+                features: [
+                    'محادثات طبيعية ذكية تحاكي البشر',
+                    'كتابة محتوى إبداعي وتقني',
+                    'مساعدة في البرمجة وحل المشكلات',
+                    'ترجمة وتلخيص النصوص',
+                    'توليد أفكار إبداعية'
+                ],
+                howTo: 'ابدأ بطرح أسئلتك أو طلباتك بشكل واضح. يمكنك استخدام ChatGPT لتحسين إنتاجيتك، تعلم مهارات جديدة، أو حتى كشريك إبداعي في مشاريعك.',
+                article: `<h3>🚀 ثورة ChatGPT في عالم الذكاء الاصطناعي</h3>
+                <p>منذ إطلاقه في نوفمبر 2022، أحدث ChatGPT ثورة حقيقية في كيفية تفاعلنا مع التكنولوجيا. هذا النموذج اللغوي الضخم، الذي طورته شركة OpenAI، استطاع أن يغير قواعد اللعبة في مجال الذكاء الاصطناعي التحاوري.</p>
+                
+                <h4>📚 كيف يعمل ChatGPT؟</h4>
+                <p>يعتمد ChatGPT على تقنية GPT (Generative Pre-trained Transformer)، وهو نموذج تم تدريبه على مليارات النصوص من الإنترنت. هذا التدريب الضخم أكسبه القدرة على فهم السياق، التنبؤ بالكلمات التالية، وتوليد نصوص متماسكة ومنطقية.</p>
+                
+                <h4>💼 استخدامات عملية في حياتك اليومية</h4>
+                <p><strong>للطلاب:</strong> يمكن استخدام ChatGPT لشرح المفاهيم الصعبة، تلخيص المقالات الطويلة، والمساعدة في البحث الأكاديمي. لكن تذكر، يجب أن يكون أداة مساعدة وليس بديلاً للتعلم الحقيقي.</p>
+                
+                <p><strong>للمبرمجين:</strong> ChatGPT مساعد برمجي ممتاز! يمكنه كتابة الأكواد، شرح الأخطاء البرمجية، اقتراح حلول للمشاكل التقنية، وحتى مراجعة الكود وتحسينه.</p>
+                
+                <p><strong>لكتّاب المحتوى:</strong> من كتابة المقالات إلى صياغة رسائل البريد الإلكتروني، يوفر ChatGPT مسودات أولية ممتازة يمكن تحسينها وتخصيصها حسب احتياجاتك.</p>
+                
+                <h4>⚠️ القيود والتحذيرات</h4>
+                <p>على الرغم من قوته، ChatGPT ليس معصوماً من الخطأ. قد يقدم معلومات غير دقيقة أحياناً، خاصة عن الأحداث الأخيرة. لذلك، من المهم دائماً التحقق من المعلومات المهمة من مصادر موثوقة.</p>
+                
+                <h4>🔮 المستقبل مع ChatGPT</h4>
+                <p>مع كل تحديث، يصبح ChatGPT أكثر ذكاءً وفائدة. النسخ الأحدث مثل GPT-4 تتفوق في الفهم والتحليل، وتفتح آفاقاً جديدة في التعليم، الأعمال، والإبداع. نحن نشهد بداية عصر جديد حيث يصبح الذكاء الاصطناعي شريكاً يومياً في حياتنا.</p>`,
+                url: 'https://chat.openai.com',
+                playStore: null
+            },
+            {
+                name: 'Midjourney',
+                icon: '🎨',
+                category: 'creative',
+                popular: true,
+                shortDesc: 'توليد صور فنية بالذكاء الاصطناعي',
+                description: 'Midjourney هي منصة رائدة في توليد الصور الفنية باستخدام الذكاء الاصطناعي. حوّل أفكارك إلى صور مذهلة بمجرد وصف نصي.',
+                features: [
+                    'توليد صور فنية عالية الجودة',
+                    'تنوع كبير في الأساليب الفنية',
+                    'سهولة الاستخدام عبر Discord',
+                    'تحديثات مستمرة لتحسين النتائج',
+                    'مجتمع إبداعي نشط'
+                ],
+                howTo: 'انضم إلى Discord الخاص بـ Midjourney واستخدم أمر /imagine متبوعًا بوصف الصورة التي تريدها. كن دقيقًا في وصفك للحصول على أفضل النتائج.',
+                article: `<h3>🎨 Midjourney: عندما يلتقي الفن بالذكاء الاصطناعي</h3>
+                <p>في عالم يتطور فيه الإبداع الرقمي بسرعة مذهلة، يبرز Midjourney كأحد أقوى الأدوات التي أحدثت ثورة في صناعة الفن الرقمي. هذه المنصة لا تقتصر على توليد صور عشوائية، بل تحول الكلمات إلى أعمال فنية تنافس إبداعات الفنانين المحترفين.</p>
+                
+                <h4>✨ سحر تحويل النص إلى صورة</h4>
+                <p>Midjourney يعمل بطريقة بسيطة لكن قوية: تكتب وصفاً لما تريد رؤيته، والذكاء الاصطناعي يحوله إلى صورة. لكن البساطة هنا خادعة، فالنتائج غالباً ما تفوق التوقعات بأميال.</p>
+                
+                <h4>🎭 تنوع لا محدود في الأساليب الفنية</h4>
+                <p>من الرسم الزيتي الكلاسيكي إلى الفن التجريدي الحديث، من التصوير الفوتوغرافي الواقعي إلى الرسوم المتحركة اليابانية (أنمي)، Midjourney يتقن كل شيء. يمكنك طلب صورة بأسلوب فنسنت فان جوخ، أو بيكاسو، أو حتى خلق أسلوب فريد خاص بك.</p>
+                
+                <h4>💡 نصائح للحصول على أفضل النتائج</h4>
+                <p><strong>كن محدداً:</strong> بدلاً من "منظر طبيعي"، جرّب "منظر جبلي في وقت الغروب، سماء أرجوانية، بحيرة هادئة تعكس الجبال، أسلوب فني واقعي".</p>
+                
+                <p><strong>استخدم معاملات الأمر:</strong> أضف --ar 16:9 لتحديد نسبة العرض إلى الارتفاع، أو --stylize لزيادة الطابع الفني.</p>
+                
+                <p><strong>التجربة والتكرار:</strong> لا تتوقع الكمال من المحاولة الأولى. جرّب صياغات مختلفة حتى تحصل على النتيجة المثالية.</p>
+                
+                <h4>🚀 استخدامات عملية</h4>
+                <p>المصممون يستخدمون Midjourney للحصول على أفكار أولية، الكتّاب لتصور شخصيات رواياتهم، أصحاب الأعمال لإنشاء محتوى مرئي فريد، والهواة لإطلاق العنان لإبداعهم دون الحاجة لمهارات فنية تقليدية.</p>
+                
+                <h4>⚖️ الجدل الأخلاقي</h4>
+                <p>مع القوة تأتي المسؤولية. أثار Midjourney نقاشات حول حقوق الملكية الفكرية ومستقبل الفنانين البشريين. من المهم استخدام هذه الأداة بشكل أخلاقي ومسؤول، واحترام حقوق الفنانين الأصليين.</p>`,
+                url: 'https://www.midjourney.com',
+                playStore: null
+            },
+            {
+                name: 'Gemini',
+                icon: '💎',
+                category: 'chat',
+                popular: true,
+                shortDesc: 'مساعد Google الذكي المتعدد الإمكانات',
+                description: 'Gemini من Google هو نموذج ذكاء اصطناعي متطور يجمع بين قوة معالجة اللغة والصور والبيانات المتعددة.',
+                features: [
+                    'معالجة النصوص والصور معًا',
+                    'تكامل مع خدمات Google',
+                    'قدرات تحليلية قوية',
+                    'دعم للغات متعددة',
+                    'واجهة سهلة الاستخدام'
+                ],
+                howTo: 'استخدم Gemini للبحث المتقدم، تحليل البيانات، أو الحصول على مساعدة في المهام اليومية. يمكنك رفع الصور والحصول على تحليلات فورية.',
+                article: `<h3>💎 Gemini: عملاق Google في عالم الذكاء الاصطناعي</h3>
+                <p>بعد سنوات من البحث والتطوير، أطلقت Google نموذج Gemini الذي يعد بإعادة تعريف ما يمكن للذكاء الاصطناعي تحقيقه. هذا ليس مجرد روبوت محادثة آخر، بل منظومة ذكاء شاملة تدمج القدرات اللغوية والبصرية والتحليلية في أداة واحدة قوية.</p>
+                
+                <h4>🔬 التكنولوجيا وراء Gemini</h4>
+                <p>Gemini مبني على بنية متعددة الوسائط (Multimodal)، مما يعني أنه لا يفهم النصوص فقط، بل الصور والبيانات المعقدة أيضاً. هذه القدرة تجعله فريداً في فهم السياق بشكل أعمق من معظم المنافسين.</p>
+                
+                <h4>🌟 ما يميز Gemini عن المنافسين</h4>
+                <p><strong>التكامل مع بيئة Google:</strong> تخيل أداة ذكاء اصطناعي متصلة مباشرة بـ Gmail، Google Drive، Google Maps وغيرها. هذا التكامل يجعل Gemini أكثر من مجرد مساعد، بل شريك حقيقي في عملك اليومي.</p>
+                
+                <p><strong>فهم متعدد الأبعاد:</strong> أرسل لـ Gemini صورة رسم بياني معقد، وسيحلله ويشرحه لك. أرفق مستنداً طويلاً، وسيلخصه ويستخرج النقاط الرئيسية.</p>
+                
+                <h4>📊 حالات استخدام قوية</h4>
+                <p><strong>للباحثين والأكاديميين:</strong> يمكن لـ Gemini تحليل أبحاث علمية، استخراج البيانات من الجداول والرسوم البيانية، ومساعدتك في صياغة استنتاجات منطقية.</p>
+                
+                <p><strong>لرواد الأعمال:</strong> تحليل اتجاهات السوق، استخراج رؤى من البيانات، وحتى المساعدة في اتخاذ قرارات استراتيجية مبنية على معلومات دقيقة.</p>
+                
+                <p><strong>للمطورين:</strong> فهم الكود، اقتراح تحسينات، وحتى إنشاء وثائق تقنية شاملة لمشاريعك البرمجية.</p>
+                
+                <h4>🔐 الخصوصية والأمان</h4>
+                <p>Google تؤكد التزامها بحماية بيانات المستخدمين. Gemini مصمم مع مراعاة معايير الخصوصية الصارمة، ويمنحك التحكم الكامل في كيفية استخدام بياناتك.</p>
+                
+                <h4>🚀 المستقبل مع Gemini</h4>
+                <p>مع التحديثات المستمرة، يصبح Gemini أكثر قوة. Google تخطط لدمجه في المزيد من المنتجات، مما يعني أننا قد نرى قريباً مساعداً ذكياً في كل جانب من جوانب حياتنا الرقمية.</p>`,
+                url: 'https://gemini.google.com',
+                playStore: null
+            },
+            {
+                name: 'Claude',
+                icon: '🧠',
+                category: 'chat',
+                popular: true,
+                shortDesc: 'مساعد ذكي آمن ومفيد من Anthropic',
+                description: 'Claude هو مساعد ذكاء اصطناعي متطور طورته Anthropic، يتميز بقدرات محادثة طبيعية وتحليل عميق مع التركيز على الأمان والشفافية.',
+                features: [
+                    'محادثات طبيعية ومفيدة',
+                    'تحليل نصوص طويلة ووثائق',
+                    'مساعدة في البرمجة والكتابة',
+                    'أمان وخصوصية عالية',
+                    'واجهة نظيفة وسهلة'
+                ],
+                howTo: 'استخدم Claude للمحادثات المعقدة، تحليل المستندات، أو المساعدة في المشاريع التقنية. يتميز بقدرته على فهم السياق بعمق.',
+                article: `<h3>🧠 Claude: الذكاء الاصطناعي الآمن والمسؤول</h3>
+                <p>في عالم يزداد قلقاً حول أخلاقيات الذكاء الاصطناعي وأمانه، تبرز Anthropic بمنتجها Claude كنموذج يضع الأمان والمسؤولية في المقدمة. Claude ليس فقط ذكياً ومفيداً، بل مصمم ليكون شريكاً جديراً بالثقة.</p>
+                
+                <h4>🛡️ الأمان أولاً: فلسفة Claude</h4>
+                <p>Anthropic أسستها مجموعة من باحثي OpenAI السابقين الذين يؤمنون بأن الذكاء الاصطناعي يجب أن يكون آمناً ومفيداً وصادقاً. Claude مبني على تقنية "Constitutional AI"، وهي طريقة تدريب تجعل النموذج يلتزم بمجموعة من المبادئ الأخلاقية.</p>
+                
+                <h4>📚 قدرات تحليلية استثنائية</h4>
+                <p>ما يميز Claude حقاً هو قدرته على معالجة وتحليل نصوص طويلة جداً - حتى 200,000 token في بعض الإصدارات! هذا يعني أنه يمكنك رفع كتاب كامل، تقرير شامل، أو مجموعة كبيرة من المستندات، وسيحللها Claude بعمق.</p>
+                
+                <h4>💻 شريك برمجي موثوق</h4>
+                <p><strong>للمطورين:</strong> Claude ممتاز في فهم الكود، اقتراح تحسينات، وحتى كتابة وثائق تقنية. العديد من المطورين يفضلونه لأنه يقدم إجابات دقيقة ومدروسة دون "هلوسات" مبالغ فيها.</p>
+                
+                <p><strong>مراجعة الكود:</strong> أرسل كودك البرمجي وستحصل على تحليل شامل للأخطاء المحتملة، اقتراحات للتحسين، وحتى شرح لما يفعله الكود بالضبط.</p>
+                
+                <h4>✍️ الكتابة والإبداع</h4>
+                <p>Claude ممتاز في مهام الكتابة المعقدة. سواء كنت تكتب مقالاً علمياً، محتوى تسويقياً، أو حتى قصة إبداعية، Claude يقدم مساعدة ذكية تحترم صوتك الخاص وأسلوبك.</p>
+                
+                <h4>🤝 التفاعل الطبيعي والصادق</h4>
+                <p>واحدة من أكثر الصفات المحببة في Claude هي صدقه. إذا لم يكن متأكداً من شيء، سيخبرك بذلك بدلاً من اختراع إجابة. هذه الشفافية تبني الثقة وتجعله أكثر فائدة على المدى الطويل.</p>
+                
+                <h4>🌍 الخصوصية والأخلاقيات</h4>
+                <p>Anthropic ملتزمة بحماية خصوصيتك. المحادثات مع Claude لا تُستخدم لتدريب النموذج بشكل افتراضي، ويمكنك التحكم في بياناتك بشكل كامل.</p>`,
+                url: 'https://claude.ai',
+                playStore: null
+            },
+            {
+                name: 'Runway ML',
+                icon: '🎬',
+                category: 'creative',
+                popular: false,
+                shortDesc: 'أدوات ذكاء اصطناعي للفيديو والوسائط',
+                description: 'Runway ML منصة متكاملة لتحرير الفيديو وتوليد المحتوى المرئي باستخدام الذكاء الاصطناعي.',
+                features: [
+                    'توليد فيديو من نص',
+                    'تحرير فيديو ذكي',
+                    'إزالة الخلفيات تلقائيًا',
+                    'تأثيرات بصرية متقدمة',
+                    'أدوات إبداعية متنوعة'
+                ],
+                howTo: 'ارفع الفيديو الخاص بك أو ابدأ من نص، واستخدم أدوات Runway لتطبيق تأثيرات ذكية وإنشاء محتوى مرئي احترافي.',
+                article: `<h3>🎬 Runway ML: استوديو الفيديو بقوة الذكاء الاصطناعي</h3>
+                <p>Runway ML يمثل المستقبل في صناعة الفيديو. هذه المنصة تجمع عشرات الأدوات الذكية في مكان واحد، من توليد الفيديو من النص إلى تحريره بطرق كانت تحتاج سابقاً لفرق كاملة من المحترفين.</p>
+                
+                <h4>🎥 من النص إلى الفيديو في دقائق</h4>
+                <p>واحدة من أقوى ميزات Runway هي قدرته على توليد مقاطع فيديو كاملة من وصف نصي بسيط. اكتب "غروب شمس فوق المحيط مع طيور تحلق"، وسيولد لك مقطع فيديو واقعي يجسد هذا المشهد.</p>
+                
+                <h4>✂️ تحرير ذكي يوفر الوقت</h4>
+                <p>إزالة الخلفيات، تتبع الحركة، تطبيق تأثيرات بصرية معقدة - كل هذا يتم بضغطة زر واحدة. ما كان يستغرق ساعات في برامج التحرير التقليدية، يمكن إنجازه في دقائق مع Runway.</p>
+                
+                <h4>🎨 للمبدعين والمحترفين</h4>
+                <p>صناع المحتوى، المخرجون، مصممو الموشن جرافيك - الجميع يجد في Runway أداة قوية تضيف إلى إبداعهم. الأداة لا تحل محل المهارات البشرية، بل تضخمها وتسرّع سير العمل.</p>`,
+                url: 'https://runwayml.com',
+                playStore: null
+            },
+            {
+                name: 'Jasper AI',
+                icon: '✍️',
+                category: 'content',
+                popular: false,
+                shortDesc: 'مساعد كتابة المحتوى التسويقي',
+                description: 'Jasper AI أداة متخصصة في كتابة المحتوى التسويقي والإعلاني باستخدام الذكاء الاصطناعي.',
+                features: [
+                    'كتابة محتوى تسويقي احترافي',
+                    'قوالب جاهزة للمحتوى',
+                    'دعم 29 لغة',
+                    'تحسين محركات البحث SEO',
+                    'تكامل مع أدوات التسويق'
+                ],
+                howTo: 'اختر نوع المحتوى المطلوب، أدخل المعلومات الأساسية، ودع Jasper يولد نصوصًا احترافية جاهزة للنشر.',
+                article: `<h3>✍️ Jasper AI: مساعدك الشخصي في التسويق بالمحتوى</h3>
+                <p>في عالم التسويق الرقمي السريع، Jasper AI يبرز كأداة أساسية للمسوقين وكتّاب المحتوى. متخصص في إنتاج نصوص تسويقية عالية الجودة بسرعة وكفاءة.</p>
+                
+                <h4>🚀 سرعة الإنتاج دون التضحية بالجودة</h4>
+                <p>Jasper يمكنه كتابة منشورات مدونة كاملة، إعلانات، رسائل بريد إلكتروني، ومحتوى لوسائل التواصل في دقائق. يستخدم المسوقون المحترفون Jasper لزيادة إنتاجيتهم بنسبة 5-10 أضعاف.</p>
+                
+                <h4>📝 قوالب لكل احتياج تسويقي</h4>
+                <p>أكثر من 50 قالباً جاهزاً: من صيغ AIDA و PAS التسويقية الشهيرة، إلى كتابة أوصاف المنتجات، عناوين جذابة، ومحتوى SEO محسّن.</p>
+                
+                <h4>💼 استثمار ذكي للشركات</h4>
+                <p>الشركات توفر آلاف الدولارات شهرياً باستخدام Jasper بدلاً من توظيف كتّاب إضافيين. المحتوى الناتج احترافي ويحتاج فقط لمراجعة سريعة قبل النشر.</p>`,
+                url: 'https://www.jasper.ai',
+                playStore: null
+            },
+            {
+                name: 'Grammarly',
+                icon: '📝',
+                category: 'content',
+                popular: true,
+                shortDesc: 'مساعد كتابة ذكي لتحسين النصوص',
+                description: 'Grammarly أداة ذكية لتحسين الكتابة بالإنجليزية، تفحص القواعد والأسلوب وتقترح تحسينات.',
+                features: [
+                    'تصحيح القواعد والإملاء',
+                    'تحسين الأسلوب والوضوح',
+                    'كشف الانتحال',
+                    'تكامل مع المتصفح',
+                    'اقتراحات ذكية للكتابة'
+                ],
+                howTo: 'ثبت إضافة المتصفح أو استخدم الموقع مباشرة. اكتب نصك وسيقوم Grammarly بتحليله وتقديم اقتراحات فورية.',
+                article: `<h3>📝 Grammarly: معلمك الشخصي في الكتابة الإنجليزية</h3>
+                <p>Grammarly تحول من مجرد مدقق إملائي بسيط إلى مساعد كتابة ذكي شامل يستخدمه أكثر من 30 مليون شخص يومياً. إذا كنت تكتب بالإنجليزية، فأنت تحتاج Grammarly.</p>
+                
+                <h4>🎯 أكثر من مجرد تصحيح نحوي</h4>
+                <p>Grammarly يفحص القواعد النحوية، الإملاء، علامات الترقيم، بل ويحلل نبرة كتابتك. هل تبدو رسمياً جداً؟ عدوانياً؟ Grammarly يخبرك ويقترح تعديلات.</p>
+                
+                <h4>💡 تعلّم أثناء الكتابة</h4>
+                <p>كل تصحيح يأتي مع شرح للخطأ، مما يحول Grammarly إلى معلم شخصي. مع الوقت، ستجد أخطاءك تقل لأنك تتعلم من اقتراحاته.</p>
+                
+                <h4>🌐 يعمل في كل مكان</h4>
+                <p>Gmail، Word، Google Docs، حتى وسائل التواصل الاجتماعي - Grammarly يعمل في كل مكان تكتب فيه، مما يضمن أن كتابتك احترافية دائماً.</p>`,
+                url: 'https://www.grammarly.com',
+                playStore: null
+            },
+            {
+                name: 'Copy.ai',
+                icon: '📄',
+                category: 'content',
+                popular: false,
+                shortDesc: 'توليد محتوى تسويقي وإعلاني',
+                description: 'Copy.ai منصة لتوليد نصوص تسويقية وإعلانية إبداعية بسرعة وسهولة.',
+                features: [
+                    'توليد نصوص إعلانية',
+                    'محتوى لوسائل التواصل',
+                    'أوصاف منتجات',
+                    'عناوين جذابة',
+                    'قوالب متنوعة'
+                ],
+                howTo: 'اختر القالب المناسب، أدخل معلومات المنتج أو الخدمة، واحصل على عشرات النصوص الإبداعية في ثوانٍ.',
+                article: `<h3>📄 Copy.ai: المولد السريع للأفكار الإبداعية</h3>
+                <p>عندما تحتاج إلى عشرات الأفكار لعناوين، شعارات، أو نصوص إعلانية بسرعة، Copy.ai هو الحل الأمثل. هذه الأداة متخصصة في التوليد السريع للمحتوى التسويقي القصير.</p>
+                
+                <h4>⚡ السرعة هي القوة</h4>
+                <p>أدخل معلومات بسيطة عن منتجك، واحصل فوراً على 10-20 نسخة مختلفة من العنوان، الوصف، أو الإعلان. مثالي للعصف الذهني والخروج بأفكار جديدة.</p>
+                
+                <h4>🎨 قوالب لكل مناسبة</h4>
+                <p>من منشورات Instagram إلى إعلانات Google، من رسائل البريد الإلكتروني إلى أوصاف المنتجات - Copy.ai لديه قالب لكل شيء.</p>
+                
+                <h4>💰 فعّال من حيث التكلفة</h4>
+                <p>بسعر أقل بكثير من توظيف كاتب نصوص، Copy.ai يوفر حلاً اقتصادياً للشركات الصغيرة والمستقلين الذين يحتاجون محتوى تسويقي باستمرار.</p>`,
+                url: 'https://www.copy.ai',
+                playStore: null
+            },
+            {
+                name: 'Notion AI',
+                icon: '📓',
+                category: 'learning',
+                popular: false,
+                shortDesc: 'مساعد ذكي داخل Notion',
+                description: 'Notion AI يدمج الذكاء الاصطناعي في منصة Notion لتحسين الإنتاجية والتنظيم.',
+                features: [
+                    'كتابة وتحرير ذكي',
+                    'تلخيص المستندات',
+                    'ترجمة فورية',
+                    'توليد أفكار',
+                    'تحسين النصوص'
+                ],
+                howTo: 'استخدم Notion AI داخل صفحات Notion الخاصة بك لكتابة المحتوى، تلخيص الملاحظات، أو توليد أفكار جديدة.',
+                article: `<h3>📓 Notion AI: الذكاء الاصطناعي يلتقي بالإنتاجية</h3>
+                <p>Notion بالفعل أداة إنتاجية قوية، لكن مع إضافة الذكاء الاصطناعي، أصبح أقوى بكثير. Notion AI يدمج بسلاسة في سير عملك اليومي ليجعلك أكثر إنتاجية.</p>
+                
+                <h4>📝 الكتابة بدون حواجز</h4>
+                <p>عالق في فقرة معينة؟ اطلب من Notion AI أن يكمل النص. تريد تلخيص اجتماع طويل؟ سيفعلها في ثوانٍ. تحتاج ترجمة؟ فورية ودقيقة.</p>
+                
+                <h4>🧠 تنظيم ذكي للمعلومات</h4>
+                <p>Notion AI يمكنه استخراج النقاط الرئيسية من ملاحظاتك، تحويل النقاط إلى فقرات كاملة، أو حتى تحويل مستند طويل إلى ملخص من صفحة واحدة.</p>
+                
+                <h4>🎯 مثالي للطلاب والباحثين</h4>
+                <p>تلخيص الأبحاث، توليد أفكار للمقالات، تنظيم الملاحظات الدراسية - Notion AI يحول Notion إلى شريك دراسي ذكي.</p>`,
+                url: 'https://www.notion.so/product/ai',
+                playStore: null
+            },
+            {
+                name: 'Canva AI',
+                icon: '🎨',
+                category: 'creative',
+                popular: true,
+                shortDesc: 'تصميم جرافيكي بمساعدة الذكاء الاصطناعي',
+                description: 'Canva AI يوفر أدوات تصميم ذكية تساعدك على إنشاء تصاميم احترافية بسهولة.',
+                features: [
+                    'قوالب تصميم احترافية',
+                    'توليد صور بالذكاء الاصطناعي',
+                    'إزالة خلفيات تلقائية',
+                    'تحرير صور ذكي',
+                    'واجهة سهلة للمبتدئين'
+                ],
+                howTo: 'ابدأ من قالب جاهز أو صفحة فارغة، واستخدم أدوات الذكاء الاصطناعي لتحسين تصميمك وإضافة عناصر إبداعية.',
+                article: `<h3>🎨 Canva AI: التصميم الجرافيكي للجميع</h3>
+                <p>Canva حول التصميم الجرافيكي من مهارة تتطلب سنوات لتعلمها إلى شيء يمكن لأي شخص القيام به. الآن، مع إضافة الذكاء الاصطناعي، أصبح أقوى من أي وقت مضى.</p>
+                
+                <h4>🖼️ من الفكرة إلى التصميم في دقائق</h4>
+                <p>اكتب وصفاً لما تريد، وسيولد Canva AI تصميماً كاملاً. تحتاج شعاراً؟ بوستر؟ منشور لإنستقرام؟ كل هذا بضغطة زر.</p>
+                
+                <h4>✂️ تحرير صور ذكي</h4>
+                <p>إزالة الخلفيات، تحسين جودة الصور، حتى توليد أجزاء مفقودة من الصورة - كل هذا بشكل تلقائي وسلس.</p>
+                
+                <h4>🎯 للجميع: من الهواة للمحترفين</h4>
+                <p>سواء كنت صاحب مشروع صغير تحتاج تصاميم لوسائل التواصل، أو مسوقاً محترفاً، Canva AI يوفر الأدوات التي تحتاجها بسعر معقول.</p>`,
+                url: 'https://www.canva.com',
+                playStore: null
+            },
+            {
+                name: 'Perplexity AI',
+                icon: '🔍',
+                category: 'analytics',
+                popular: false,
+                shortDesc: 'محرك بحث ذكي بإجابات دقيقة',
+                description: 'Perplexity AI محرك بحث يستخدم الذكاء الاصطناعي لتقديم إجابات دقيقة مع المصادر.',
+                features: [
+                    'إجابات دقيقة مع مصادر',
+                    'بحث سريع وذكي',
+                    'متابعة الأسئلة',
+                    'واجهة بسيطة',
+                    'نتائج موثوقة'
+                ],
+                howTo: 'اطرح سؤالك وسيقدم Perplexity إجابة شاملة مع روابط المصادر، مما يوفر عليك الوقت في البحث.',
+                article: `<h3>🔍 Perplexity AI: محرك البحث الذي يفهمك</h3>
+                <p>في عصر المعلومات الزائدة، Perplexity AI يبرز كمحرك بحث ذكي لا يعطيك روابط فقط، بل إجابات مباشرة ودقيقة مع المصادر.</p>
+                
+                <h4>🎯 إجابات مباشرة، لا روابط فقط</h4>
+                <p>بدلاً من البحث في عشرات المواقع، Perplexity يقرأها جميعاً ويعطيك إجابة موحدة وشاملة مع الإشارة للمصادر. يوفر عليك ساعات من البحث.</p>
+                
+                <h4>📚 موثوقية مع الشفافية</h4>
+                <p>كل معلومة مدعومة برابط مصدرها. يمكنك التحقق من المعلومات بنفسك، مما يجعله مثالياً للبحث الأكاديمي والمهني.</p>
+                
+                <h4>💬 محادثة بحث تفاعلية</h4>
+                <p>اطرح سؤالاً متابعاً، واطلب توضيحات - Perplexity يفهم السياق ويستمر في الحوار، مما يجعل البحث تجربة تفاعلية طبيعية.</p>`,
+                url: 'https://www.perplexity.ai',
+                playStore: null
+            },
+            {
+                name: 'Synthesia',
+                icon: '🎥',
+                category: 'creative',
+                popular: false,
+                shortDesc: 'توليد فيديوهات بمذيعين افتراضيين',
+                description: 'Synthesia منصة لإنشاء فيديوهات احترافية بمذيعين افتراضيين باستخدام الذكاء الاصطناعي.',
+                features: [
+                    'مذيعون افتراضيون واقعيون',
+                    'دعم 120+ لغة',
+                    'قوالب فيديو جاهزة',
+                    'تحرير سهل',
+                    'جودة احترافية'
+                ],
+                howTo: 'اختر مذيعًا افتراضيًا، اكتب النص، واحصل على فيديو احترافي في دقائق دون الحاجة لمعدات تصوير.',
+                article: `<h3>🎥 Synthesia: استوديو الفيديو الافتراضي</h3>
+                <p>تخيل إنشاء فيديوهات تدريبية أو تسويقية احترافية بمذيعين واقعيين دون الحاجة لكاميرات، استوديوهات، أو حتى ممثلين حقيقيين. هذا ما يقدمه Synthesia.</p>
+                
+                <h4>🤖 مذيعون افتراضيون بجودة عالية</h4>
+                <p>اختر من عشرات المذيعين الافتراضيين الذين يبدون ويتحركون بشكل طبيعي جداً. يمكنك حتى إنشاء مذيع افتراضي خاص بك من صورتك.</p>
+                
+                <h4>🌍 120+ لغة بصوت واحد</h4>
+                <p>اكتب نصك بأي لغة، والمذيع الافتراضي سينطقه بشكل طبيعي مع حركات شفاه متزامنة. مثالي للشركات العالمية التي تحتاج محتوى بلغات متعددة.</p>
+                
+                <h4>💼 استخدامات تجارية قوية</h4>
+                <p>التدريب المؤسسي، فيديوهات المنتجات، المحتوى التعليمي - الشركات توفر آلاف الدولارات شهرياً بإنتاج فيديوهات عالية الجودة بكلفة بسيطة.</p>`,
+                url: 'https://www.synthesia.io',
+                playStore: null
+            }
+        ];
+
+        let currentCategory = 'all';
+
+        // Render AI Cards
+        function renderAICards(category = 'all') {
+            const grid = document.getElementById('aiGrid');
+            grid.innerHTML = '';
+            
+            const filtered = category === 'all' 
+                ? aiTools 
+                : aiTools.filter(tool => tool.category === category);
+            
+            filtered.forEach((tool, index) => {
+                const card = document.createElement('div');
+                card.className = 'ai-card';
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.onclick = () => showDetail(tool);
+                
+                card.innerHTML = `
+                    ${tool.popular ? '<div class="popular-badge">🔥 شائع</div>' : ''}
+                    <div class="ai-card-inner">
+                        <div class="ai-icon">${tool.icon}</div>
+                        <h3>${tool.name}</h3>
+                        <p>${tool.shortDesc}</p>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Show Detail Page
+        function showDetail(tool) {
+            document.getElementById('mainPage').style.display = 'none';
+            document.getElementById('detailPage').classList.add('active');
+            
+            document.getElementById('detailIcon').textContent = tool.icon;
+            document.getElementById('detailTitle').textContent = tool.name;
+            document.getElementById('detailShortDesc').textContent = tool.shortDesc;
+            document.getElementById('detailDescription').textContent = tool.description;
+            document.getElementById('detailHowTo').textContent = tool.howTo;
+            
+            const featuresList = document.getElementById('detailFeatures');
+            featuresList.innerHTML = '';
+            tool.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = '✓ ' + feature;
+                featuresList.appendChild(li);
+            });
+            
+            // Display Article
+            const articleDiv = document.getElementById('detailArticle');
+            if (tool.article) {
+                articleDiv.innerHTML = tool.article;
+            } else {
+                articleDiv.innerHTML = '<p>المقال قيد التحضير...</p>';
+            }
+            
+            document.getElementById('detailVisitBtn').onclick = () => window.open(tool.url, '_blank');
+            
+            if (tool.playStore) {
+                document.getElementById('detailDownloadBtn').style.display = 'inline-block';
+                document.getElementById('detailDownloadBtn').onclick = () => window.open(tool.playStore, '_blank');
+            } else {
+                document.getElementById('detailDownloadBtn').style.display = 'none';
+            }
+            
+            window.scrollTo(0, 0);
+        }
+
+        // Show Main Page
+        function showMainPage() {
+            document.getElementById('detailPage').classList.remove('active');
+            document.getElementById('mainPage').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('themeIcon');
+            
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                icon.textContent = '☀️';
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                icon.textContent = '🌙';
+            }
+        }
+
+        // Share Website
+        function shareWebsite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'AI Hub - مركز الذكاء الاصطناعي',
+                    text: 'اكتشف أفضل أدوات الذكاء الاصطناعي في مكان واحد!',
+                    url: window.location.href
+                });
+            } else {
+                alert('تم نسخ الرابط! شارك AI Hub مع أصدقائك 🚀');
+                navigator.clipboard.writeText(window.location.href);
+            }
+        }
+
+        // Category Filter
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                renderAICards(currentCategory);
+            });
+        });
+
+        // Search
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const search = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.ai-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(search) ? 'block' : 'none';
+            });
+        });
+
+        // Initialize
+        renderAICards();
+
+        // Articles Data
+        const articles = {
+            genai: {
+                title: 'ما هو الذكاء الاصطناعي التوليدي؟',
+                content: `
+                    <div class="article-content">
+                        <h1>🤖 ما هو الذكاء الاصطناعي التوليدي؟</h1>
+                        
+                        <p>الذكاء الاصطناعي التوليدي (Generative AI) هو أحد أكثر التطورات إثارة في عالم التكنولوجيا الحديثة. إنه فرع من الذكاء الاصطناعي يركز على إنشاء محتوى جديد وأصلي بدلاً من مجرد تحليل البيانات الموجودة أو التنبؤ بها.</p>
+
+                        <h2>📚 التعريف الأساسي</h2>
+                        <p>الذكاء الاصطناعي التوليدي هو نظام يمكنه <strong>توليد محتوى جديد</strong> مثل النصوص، الصور، الموسيقى، الفيديو، والأكواد البرمجية بناءً على البيانات التي تدرب عليها. يعتمد على نماذج التعلم العميق التي تتعلم الأنماط من كميات هائلة من البيانات.</p>
+
+                        <div class="highlight-box">
+                            <p><strong>💡 مثال بسيط:</strong> تخيل أنك تطلب من ChatGPT كتابة قصة قصيرة عن رائد فضاء - سيقوم النموذج بتوليد قصة جديدة تمامًا لم تكن موجودة من قبل، بناءً على فهمه للغة والسرد القصصي.</p>
+                        </div>
+
+                        <h2>⚙️ كيف يعمل؟</h2>
+                        <p>يعتمد الذكاء الاصطناعي التوليدي على تقنيات متقدمة مثل:</p>
+                        <ul>
+                            <li><strong>نماذج اللغة الكبيرة (LLMs):</strong> مثل GPT-4 و Claude التي تتعلم من مليارات الكلمات لفهم اللغة وتوليد نصوص جديدة</li>
+                            <li><strong>شبكات الخصومة التوليدية (GANs):</strong> تستخدم في توليد الصور والفيديو بواقعية مذهلة</li>
+                            <li><strong>نماذج الانتشار (Diffusion Models):</strong> تقنية حديثة تستخدم في Midjourney و DALL-E لتوليد صور فنية</li>
+                            <li><strong>المحولات (Transformers):</strong> البنية الأساسية التي تمكن النماذج من فهم السياق بشكل عميق</li>
+                        </ul>
+
+                        <h2>🎯 تطبيقات عملية</h2>
+                        
+                        <h3>1. إنشاء المحتوى</h3>
+                        <p>كتابة المقالات، القصص، المحتوى التسويقي، والبريد الإلكتروني بشكل آلي وبجودة عالية.</p>
+
+                        <h3>2. التصميم والفن</h3>
+                        <p>توليد صور فنية، شعارات، تصاميم جرافيكية، ومقاطع فيديو بمجرد وصف نصي.</p>
+
+                        <h3>3. البرمجة</h3>
+                        <p>كتابة أكواد برمجية، اكتشاف الأخطاء، وتحسين الكود بمساعدة أدوات مثل GitHub Copilot.</p>
+
+                        <h3>4. التعليم</h3>
+                        <p>إنشاء مواد تعليمية مخصصة، شرح المفاهيم المعقدة، وتوفير تجارب تعليمية تفاعلية.</p>
+
+                        <h3>5. الترفيه</h3>
+                        <p>توليد موسيقى، تصميم ألعاب، وإنشاء محتوى تفاعلي جديد.</p>
+
+                        <h2>🌟 الفرق بين الذكاء التوليدي والذكاء التقليدي</h2>
+                        <ul>
+                            <li><strong>الذكاء التقليدي:</strong> يحلل البيانات ويصنفها - مثل التعرف على الصور أو توقع الأسعار</li>
+                            <li><strong>الذكاء التوليدي:</strong> يبتكر محتوى جديد - مثل رسم صورة أو كتابة قصيدة</li>
+                        </ul>
+
+                        <h2>⚠️ التحديات والاعتبارات</h2>
+                        <p>رغم قوة هذه التقنية، هناك تحديات مهمة:</p>
+                        <ul>
+                            <li><strong>المصداقية:</strong> قد ينتج محتوى غير دقيق أو مضلل</li>
+                            <li><strong>الأخلاقيات:</strong> قضايا حقوق الملكية والاستخدام المسؤول</li>
+                            <li><strong>التحيز:</strong> قد يعكس تحيزات موجودة في بيانات التدريب</li>
+                            <li><strong>الطاقة:</strong> يستهلك موارد حوسبية كبيرة</li>
+                        </ul>
+
+                        <h2>🚀 المستقبل</h2>
+                        <p>الذكاء الاصطناعي التوليدي يتطور بسرعة مذهلة. نتوقع في السنوات القادمة:</p>
+                        <ul>
+                            <li>نماذج أكثر ذكاءً وكفاءة</li>
+                            <li>تطبيقات أوسع في مجالات جديدة</li>
+                            <li>أدوات أكثر سهولة وإتاحة للجميع</li>
+                            <li>تكامل أعمق مع حياتنا اليومية</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <p><strong>💭 خلاصة:</strong> الذكاء الاصطناعي التوليدي ليس مجرد أداة تقنية، بل هو شريك إبداعي يمكنه مساعدتنا في التفكير، الابتكار، والإنتاج بطرق لم نكن نتخيلها من قبل. المفتاح هو فهم قدراته وحدوده واستخدامه بشكل مسؤول وإبداعي.</p>
+                        </div>
+                    </div>
+                `
+            },
+            tools: {
+                title: 'أفضل 5 أدوات ذكاء اصطناعي للمصممين',
+                content: `
+                    <div class="article-content">
+                        <h1>🎨 أفضل 5 أدوات ذكاء اصطناعي للمصممين</h1>
+                        
+                        <p>ثورة الذكاء الاصطناعي غيّرت عالم التصميم بشكل جذري. لم يعد المصممون بحاجة لقضاء ساعات في المهام المتكررة، بل يمكنهم الآن الاستفادة من أدوات ذكية تعزز إبداعهم وتضاعف إنتاجيتهم.</p>
+
+                        <h2>1. 🌟 Midjourney - توليد الصور الفنية</h2>
+                        
+                        <h3>ما هي؟</h3>
+                        <p>Midjourney هي أداة رائدة في توليد الصور باستخدام الذكاء الاصطناعي. تحوّل أوصافك النصية إلى صور فنية مذهلة بجودة احترافية.</p>
+
+                        <h3>لماذا يحبها المصممون؟</h3>
+                        <ul>
+                            <li><strong>جودة فنية استثنائية:</strong> تنتج صورًا بمستوى فني راقٍ يضاهي عمل فنانين محترفين</li>
+                            <li><strong>سرعة الإنتاج:</strong> توليد تصاميم معقدة في دقائق بدلاً من أيام</li>
+                            <li><strong>تنوع الأساليب:</strong> من الواقعية إلى التجريدي، من الأنمي إلى الزيتي</li>
+                            <li><strong>مثالية للـ Mood Boards:</strong> توليد أفكار ورؤى بصرية سريعة للمشاريع</li>
+                        </ul>
+
+                        <h3>أفضل استخدامات:</h3>
+                        <p>الإعلانات، غلاف الكتب، تصميم المنتجات، الرسوم التوضيحية، مفاهيم اللعبة</p>
+
+                        <div class="highlight-box">
+                            <p><strong>💡 نصيحة احترافية:</strong> كن محددًا في أوامرك. بدلاً من "منظر طبيعي"، جرب "منظر طبيعي جبلي عند الغروب بأسلوب Studio Ghibli، إضاءة ذهبية دافئة"</p>
+                        </div>
+
+                        <h2>2. 🎨 Adobe Firefly - قوة أدوبي بالذكاء الاصطناعي</h2>
+                        
+                        <h3>ما هي؟</h3>
+                        <p>Firefly هي مجموعة أدوات ذكاء اصطناعي مدمجة في تطبيقات Adobe، مصممة خصيصًا للمصممين المحترفين.</p>
+
+                        <h3>المميزات الأساسية:</h3>
+                        <ul>
+                            <li><strong>توليد النص للصورة:</strong> إنشاء صور من أوصاف نصية</li>
+                            <li><strong>تعبئة توليدية:</strong> إضافة أو إزالة عناصر من الصور بذكاء</li>
+                            <li><strong>تأثيرات نصية:</strong> إنشاء نصوص بتأثيرات فنية مذهلة</li>
+                            <li><strong>إعادة التلوين:</strong> تغيير ألوان التصميم بنقرة واحدة</li>
+                            <li><strong>التكامل السلس:</strong> يعمل داخل Photoshop، Illustrator، وExpress</li>
+                        </ul>
+
+                        <h3>الميزة الأخلاقية:</h3>
+                        <p>Adobe تدرب Firefly فقط على محتوى قانوني (Adobe Stock، محتوى منتهي الحقوق، محتوى مفتوح)، مما يجعله آمنًا للاستخدام التجاري.</p>
+
+                        <h2>3. 🖼️ Canva AI - التصميم السريع للجميع</h2>
+                        
+                        <h3>ما هي؟</h3>
+                        <p>Canva دمجت أدوات ذكاء اصطناعي قوية في منصتها السهلة، مما جعل التصميم الاحترافي متاحًا للجميع.</p>
+
+                        <h3>الأدوات الذكية:</h3>
+                        <ul>
+                            <li><strong>Magic Design:</strong> توليد تصاميم كاملة من فكرة واحدة</li>
+                            <li><strong>Magic Eraser:</strong> إزالة خلفيات أو عناصر غير مرغوبة</li>
+                            <li><strong>Text to Image:</strong> توليد صور مخصصة لتصاميمك</li>
+                            <li><strong>Magic Write:</strong> كتابة محتوى تسويقي ونصوص</li>
+                            <li><strong>Brand Kit AI:</strong> توليد هوية بصرية متكاملة</li>
+                        </ul>
+
+                        <h3>مثالية لـ:</h3>
+                        <p>وسائل التواصل الاجتماعي، العروض التقديمية، المواد التسويقية، المحتوى السريع</p>
+
+                        <h2>4. 🎬 Runway ML - فيديو وتصميم متقدم</h2>
+                        
+                        <h3>ما هي؟</h3>
+                        <p>Runway هي منصة شاملة للإبداع بالذكاء الاصطناعي، متخصصة في الفيديو والوسائط المتعددة.</p>
+
+                        <h3>قدرات فريدة:</h3>
+                        <ul>
+                            <li><strong>Gen-2:</strong> توليد فيديو من نص أو صورة</li>
+                            <li><strong>إزالة الخلفية:</strong> للصور والفيديو بدقة عالية</li>
+                            <li><strong>التتبع الذكي:</strong> عزل وتعديل عناصر محددة في الفيديو</li>
+                            <li><strong>توسيع الصور:</strong> تمديد الصور خارج حدودها الأصلية</li>
+                            <li><strong>أدوات متعددة:</strong> أكثر من 30 أداة ذكية مختلفة</li>
+                        </ul>
+
+                        <h3>للمصممين الذين يعملون على:</h3>
+                        <p>محتوى الفيديو، الموشن جرافيك، المؤثرات البصرية، التصميم التفاعلي</p>
+
+                        <h2>5. 🎭 Remove.bg & Cleanup.pictures - تحرير ذكي</h2>
+                        
+                        <h3>Remove.bg - إزالة الخلفيات</h3>
+                        <p>أداة متخصصة في إزالة خلفيات الصور بدقة مذهلة وفي ثوانٍ. مثالية للتجارة الإلكترونية، البورتريهات، وتصميم المنتجات.</p>
+
+                        <h3>Cleanup.pictures - تنظيف الصور</h3>
+                        <p>إزالة أي عنصر غير مرغوب من الصور (أشخاص، أشياء، عيوب) بذكاء اصطناعي متقدم دون ترك أثر.</p>
+
+                        <h3>لماذا مهمتان؟</h3>
+                        <ul>
+                            <li>توفير ساعات من العمل اليدوي الشاق</li>
+                            <li>نتائج احترافية حتى للمبتدئين</li>
+                            <li>مجانية أو بأسعار معقولة جدًا</li>
+                            <li>سهلة الاستخدام - بضع نقرات فقط</li>
+                        </ul>
+
+                        <h2>🎯 كيف تختار الأداة المناسبة؟</h2>
+                        
+                        <div class="highlight-box">
+                            <p><strong>للمبتدئين:</strong> ابدأ بـ Canva AI - سهلة وشاملة<br>
+                            <strong>للمحترفين:</strong> Adobe Firefly للتكامل مع سير العمل الاحترافي<br>
+                            <strong>للفنانين:</strong> Midjourney للإبداع الفني غير المحدود<br>
+                            <strong>لمصممي الفيديو:</strong> Runway ML لقدرات الفيديو المتقدمة<br>
+                            <strong>للمهام السريعة:</strong> Remove.bg و Cleanup للتحرير السريع</p>
+                        </div>
+
+                        <h2>💼 نصائح للاستخدام الفعال</h2>
+                        <ol>
+                            <li><strong>تعلم الأوامر (Prompts):</strong> جودة النتيجة تعتمد على وضوح طلبك</li>
+                            <li><strong>جرب وكرر:</strong> لا تتوقع الكمال من المحاولة الأولى</li>
+                            <li><strong>ادمجها مع مهاراتك:</strong> الذكاء الاصطناعي يكمل إبداعك، لا يستبدله</li>
+                            <li><strong>ابقَ مطلعًا:</strong> هذه الأدوات تتحسن باستمرار</li>
+                            <li><strong>احترم حقوق الملكية:</strong> تأكد من شروط الاستخدام التجاري</li>
+                        </ol>
+
+                        <h2>🚀 الخلاصة</h2>
+                        <p>هذه الأدوات الخمس تمثل قمة ما يمكن للذكاء الاصطناعي تقديمه للمصممين اليوم. لا تحل محل الإبداع البشري، بل تعززه وتسرعه. المصمم الذكي هو من يتقن استخدامها كأدوات في ترسانته الإبداعية، مع الحفاظ على رؤيته الفنية وهويته التصميمية.</p>
+                        
+                        <p><strong>المستقبل للمصممين الذين يتبنون هذه التقنيات ويطورون مهاراتهم باستمرار!</strong> 🎨✨</p>
+                    </div>
+                `
+            },
+            future: {
+                title: 'كيف يغير الذكاء الاصطناعي مستقبل العمل؟',
+                content: `
+                    <div class="article-content">
+                        <h1>🚀 كيف يغير الذكاء الاصطناعي مستقبل العمل؟</h1>
+                        
+                        <p>نشهد اليوم تحولاً جذرياً في طبيعة العمل وبيئته، وفي قلب هذا التحول يقف الذكاء الاصطناعي. ليس الأمر مجرد أتمتة للمهام، بل هو إعادة تشكيل كاملة لكيفية عملنا، تفكيرنا، وإبداعنا.</p>
+
+                        <h2>🌍 التحول الكبير: من الأتمتة إلى التعاون</h2>
+                        
+                        <h3>الموجة الأولى: الأتمتة (الماضي)</h3>
+                        <p>في الماضي، كانت التكنولوجيا تركز على أتمتة المهام المتكررة البسيطة - مثل خطوط الإنتاج والحسابات الأساسية.</p>
+
+                        <h3>الموجة الحالية: التعاون الذكي (الحاضر)</h3>
+                        <p>اليوم، الذكاء الاصطناعي لا يستبدل العامل البشري، بل <strong>يعمل معه كشريك ذكي</strong>. يساعد في اتخاذ القرارات، توليد الأفكار، وتحليل البيانات المعقدة.</p>
+
+                        <div class="highlight-box">
+                            <p><strong>💭 فكر بالأمر هكذا:</strong> الذكاء الاصطناعي مثل مساعد شخصي فائق الذكاء يعمل 24/7، يتعلم من عملك، ويساعدك على إنجاز المزيد بشكل أفضل وأسرع.</p>
+                        </div>
+
+                        <h2>💼 كيف يتغير سوق العمل؟</h2>
+
+                        <h3>1. 📈 وظائف جديدة تظهر</h3>
+                        <p>الذكاء الاصطناعي يخلق وظائف جديدة لم تكن موجودة من قبل:</p>
+                        <ul>
+                            <li><strong>مهندس الأوامر (Prompt Engineer):</strong> متخصص في صياغة تعليمات فعالة للذكاء الاصطناعي</li>
+                            <li><strong>مدرب نماذج الذكاء الاصطناعي:</strong> يعلّم الأنظمة كيف تفهم وتتفاعل</li>
+                            <li><strong>مراجع جودة الذكاء الاصطناعي:</strong> يضمن دقة وأخلاقية المخرجات</li>
+                            <li><strong>استشاري تكامل الذكاء الاصطناعي:</strong> يساعد الشركات على دمج الذكاء الاصطناعي في عملياتها</li>
+                            <li><strong>محلل أخلاقيات الذكاء الاصطناعي:</strong> يضمن الاستخدام المسؤول والعادل</li>
+                        </ul>
+
+                        <h3>2. 🔄 وظائف تتحول</h3>
+                        <p>الوظائف الحالية لا تختفي، بل تتطور:</p>
+                        <ul>
+                            <li><strong>المحامون:</strong> يستخدمون الذكاء الاصطناعي لتحليل القضايا والسوابق بسرعة فائقة</li>
+                            <li><strong>الأطباء:</strong> يعتمدون على الذكاء الاصطناعي للتشخيص المبكر والدقيق</li>
+                            <li><strong>المعلمون:</strong> يستخدمون أدوات ذكية لتخصيص التعليم لكل طالب</li>
+                            <li><strong>المصممون:</strong> يستفيدون من أدوات توليدية لتسريع الإبداع</li>
+                            <li><strong>المبرمجون:</strong> يكتبون الكود بمساعدة مساعدين أذكياء مثل GitHub Copilot</li>
+                        </ul>
+
+                        <h3>3. ⚡ الإنتاجية تتضاعف</h3>
+                        <p>الموظف الذي يتقن استخدام الذكاء الاصطناعي يمكنه إنجاز عمل 3-5 أشخاص في نفس الوقت، مع جودة أعلى.</p>
+
+                        <h2>🎯 المهارات المطلوبة في عصر الذكاء الاصطناعي</h2>
+
+                        <h3>مهارات تقنية جديدة:</h3>
+                        <ol>
+                            <li><strong>فهم أساسيات الذكاء الاصطناعي:</strong> لا تحتاج لتكون خبيرًا، لكن فهم كيف يعمل مهم</li>
+                            <li><strong>التعامل مع الأدوات:</strong> معرفة متى وكيف تستخدم ChatGPT، Midjourney، وغيرها</li>
+                            <li><strong>تحليل البيانات:</strong> القدرة على فهم واستخدام الرؤى من البيانات</li>
+                            <li><strong>الأمن السيبراني:</strong> فهم مخاطر الذكاء الاصطناعي وكيفية الحماية منها</li>
+                        </ol>
+
+                        <h3>مهارات إنسانية أساسية:</h3>
+                        <ol>
+                            <li><strong>التفكير النقدي:</strong> التحقق من مخرجات الذكاء الاصطناعي وعدم الثقة العمياء</li>
+                            <li><strong>الإبداع:</strong> الذكاء الاصطناعي ينفذ، لكن البشر يبتكرون الأفكار الأصلية</li>
+                            <li><strong>الذكاء العاطفي:</strong> التعامل مع البشر وفهم مشاعرهم - شيء لا يستطيع الذكاء الاصطناعي فعله</li>
+                            <li><strong>التواصل:</strong> شرح الأفكار المعقدة ببساطة</li>
+                            <li><strong>القيادة والإدارة:</strong> قيادة فرق بشرية وذكية معًا</li>
+                        </ol>
+
+                        <div class="highlight-box">
+                            <p><strong>🌟 قاعدة ذهبية:</strong> المهارات التي لا يمكن للذكاء الاصطناعي تقليدها (الإبداع، التعاطف، القيادة) ستكون الأكثر قيمة في المستقبل.</p>
+                        </div>
+
+                        <h2>🏢 كيف تتغير بيئة العمل؟</h2>
+
+                        <h3>1. العمل الهجين الذكي</h3>
+                        <p>مع أدوات الذكاء الاصطناعي، أصبح العمل من أي مكان أكثر فعالية. الأدوات الذكية تساعد في:</p>
+                        <ul>
+                            <li>إدارة المشاريع بذكاء</li>
+                            <li>التواصل الفعال عبر المناطق الزمنية</li>
+                            <li>الترجمة الفورية للاجتماعات متعددة اللغات</li>
+                            <li>تلخيص الاجتماعات واستخراج النقاط المهمة</li>
+                        </ul>
+
+                        <h3>2. التعلم المستمر</h3>
+                        <p>الوظيفة لم تعد ثابتة. الموظف الناجح هو من يتعلم باستمرار. الذكاء الاصطناعي يساعد في:</p>
+                        <ul>
+                            <li>تخصيص خطط التعلم</li>
+                            <li>توفير تدريب فوري عند الحاجة</li>
+                            <li>تقييم المهارات وتحديد الفجوات</li>
+                        </ul>
+
+                        <h3>3. اتخاذ القرارات المعتمد على البيانات</h3>
+                        <p>الشركات تستخدم الذكاء الاصطناعي لـ:</p>
+                        <ul>
+                            <li>تحليل اتجاهات السوق</li>
+                            <li>توقع احتياجات العملاء</li>
+                            <li>تحسين العمليات التشغيلية</li>
+                            <li>تقليل التكاليف وزيادة الأرباح</li>
+                        </ul>
+
+                        <h2>⚠️ التحديات والمخاوف</h2>
+
+                        <h3>1. فقدان الوظائف</h3>
+                        <p><strong>الحقيقة:</strong> بعض الوظائف ستختفي (خاصة الروتينية والمتكررة)، لكن وظائف جديدة أكثر ستظهر. المفتاح هو التكيف والتعلم.</p>
+
+                        <h3>2. الفجوة الرقمية</h3>
+                        <p>من لا يواكب التطور التكنولوجي سيجد نفسه متخلفًا. <strong>الحل:</strong> التعليم والتدريب المستمر.</p>
+
+                        <h3>3. الخصوصية والأمان</h3>
+                        <p>استخدام الذكاء الاصطناعي يتطلب مشاركة بيانات. <strong>الحل:</strong> سياسات صارمة لحماية البيانات.</p>
+
+                        <h3>4. الاعتماد المفرط</h3>
+                        <p>الاعتماد الكامل على الذكاء الاصطناعي يمكن أن يضعف المهارات البشرية. <strong>الحل:</strong> التوازن بين الاستخدام والحفاظ على المهارات.</p>
+
+                        <h2>🎓 كيف تستعد للمستقبل؟</h2>
+
+                        <h3>للموظفين:</h3>
+                        <ol>
+                            <li><strong>تعلم أساسيات الذكاء الاصطناعي:</strong> خذ دورات مجانية على Coursera أو YouTube</li>
+                            <li><strong>استخدم الأدوات يوميًا:</strong> اجعل ChatGPT، Notion AI جزءًا من روتينك</li>
+                            <li><strong>ركز على المهارات الإنسانية:</strong> طور إبداعك، تواصلك، وقيادتك</li>
+                            <li><strong>كن مرنًا:</strong> استعد لتغيير مسارك المهني إذا لزم الأمر</li>
+                            <li><strong>اعمل على مشاريع جانبية:</strong> جرب أفكارًا جديدة باستخدام الذكاء الاصطناعي</li>
+                        </ol>
+
+                        <h3>للشركات:</h3>
+                        <ol>
+                            <li><strong>استثمر في التدريب:</strong> درب موظفيك على استخدام الذكاء الاصطناعي</li>
+                            <li><strong>ابدأ صغيرًا:</strong> جرب مشاريع تجريبية قبل التطبيق الواسع</li>
+                            <li><strong>ضع سياسات واضحة:</strong> حدد كيف ومتى يُستخدم الذكاء الاصطناعي</li>
+                            <li><strong>اهتم بالأخلاقيات:</strong> تأكد من استخدام عادل ومسؤول</li>
+                            <li><strong>عزز ثقافة التعلم:</strong> شجع التجريب والابتكار</li>
+                        </ol>
+
+                        <h2>🔮 توقعات المستقبل (2025-2035)</h2>
+
+                        <h3>المدى القريب (2025-2028):</h3>
+                        <ul>
+                            <li>كل موظف مكتبي سيستخدم مساعد ذكاء اصطناعي شخصي</li>
+                            <li>الشركات الصغيرة ستتمكن من منافسة الكبيرة بفضل الذكاء الاصطناعي</li>
+                            <li>العمل عن بعد سيصبح الوضع الطبيعي لمعظم الوظائف</li>
+                            <li>أسبوع العمل قد يقل إلى 4 أيام بفضل الإنتاجية العالية</li>
+                        </ul>
+
+                        <h3>المدى البعيد (2029-2035):</h3>
+                        <ul>
+                            <li>ظهور وظائف لا نتخيلها اليوم (مثل مهندس واقع افتراضي ذكي)</li>
+                            <li>التعليم المخصص بالكامل لكل فرد</li>
+                            <li>الذكاء الاصطناعي سيدير أجزاء كبيرة من الاقتصاد</li>
+                            <li>التركيز على العمل الإبداعي والاستراتيجي للبشر</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <p><strong>💡 الخلاصة النهائية:</strong> الذكاء الاصطناعي ليس عدوًا يهدد وظائفنا، بل هو أداة قوية يمكنها تحريرنا من المهام المملة ومنحنا الوقت للإبداع والابتكار. المستقبل للذين يتعلمون كيف يعملون <strong>مع</strong> الذكاء الاصطناعي، وليس ضده.</p>
+                        </div>
+
+                        <h2>🚀 ابدأ اليوم!</h2>
+                        <p>لا تنتظر المستقبل ليأتي إليك. ابدأ الآن:</p>
+                        <ul>
+                            <li>جرب ChatGPT في عملك اليومي</li>
+                            <li>خذ دورة مجانية عن الذكاء الاصطناعي</li>
+                            <li>شارك في مجتمعات الذكاء الاصطناعي</li>
+                            <li>اقرأ عن أحدث التطورات</li>
+                        </ul>
+
+                        <p><strong>المستقبل يُبنى اليوم، وأنت جزء منه! 🌟</strong></p>
+                    </div>
+                `
+            },
+            ethics: {
+                title: 'أخلاقيات استخدام الذكاء الاصطناعي',
+                content: `
+                    <div class="article-content">
+                        <h1>⚖️ أخلاقيات استخدام الذكاء الاصطناعي</h1>
+                        
+                        <p>مع القوة الهائلة التي يوفرها الذكاء الاصطناعي تأتي مسؤولية كبيرة. استخدام هذه التكنولوجيا بشكل أخلاقي ومسؤول ليس خيارًا، بل ضرورة حتمية لضمان مستقبل آمن وعادل للجميع.</p>
+
+                        <h2>🎭 لماذا الأخلاقيات مهمة؟</h2>
+                        
+                        <p>الذكاء الاصطناعي يؤثر على حياة الملايين - من القرارات الطبية إلى التوظيف، من الأمن القومي إلى خصوصيتك الشخصية. الأخطاء أو الاستخدام غير الأخلاقي يمكن أن يؤدي إلى:</p>
+                        
+                        <ul>
+                            <li>تمييز ممنهج ضد فئات معينة</li>
+                            <li>انتهاك الخصوصية على نطاق واسع</li>
+                            <li>انتشار المعلومات المضللة</li>
+                            <li>فقدان الوظائف بشكل غير عادل</li>
+                            <li>أضرار اجتماعية واقتصادية</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <p><strong>💭 تذكر:</strong> الذكاء الاصطناعي يتعلم من بياناتنا، ويعكس قيمنا وتحيزاتنا. إذا لم نكن حذرين، سنكرر أخطاء الماضي في المستقبل.</p>
+                        </div>
+
+                        <h2>🔍 القضايا الأخلاقية الرئيسية</h2>
+
+                        <h3>1. 🎯 التحيز والعدالة (Bias & Fairness)</h3>
+                        
+                        <p><strong>المشكلة:</strong> أنظمة الذكاء الاصطناعي يمكن أن تكون متحيزة ضد جنس، عرق، أو فئة اجتماعية معينة.</p>
+
+                        <p><strong>أمثلة واقعية:</strong></p>
+                        <ul>
+                            <li><strong>أنظمة التوظيف:</strong> نظام Amazon لفلترة السير الذاتية كان متحيزًا ضد النساء لأنه تدرب على بيانات تاريخية تفضل الرجال</li>
+                            <li><strong>التعرف على الوجوه:</strong> بعض الأنظمة أقل دقة في التعرف على الوجوه الداكنة</li>
+                            <li><strong>القروض البنكية:</strong> خوارزميات قد ترفض قروضًا لأشخاص من أحياء معينة</li>
+                        </ul>
+
+                        <p><strong>الحل:</strong></p>
+                        <ul>
+                            <li>استخدام بيانات تدريب متنوعة ومتوازنة</li>
+                            <li>مراجعة دورية للنتائج والتأكد من عدم التحيز</li>
+                            <li>فرق تطوير متنوعة تمثل مختلف الخلفيات</li>
+                            <li>شفافية في كيفية عمل النظام</li>
+                        </ul>
+
+                        <h3>2. 🔒 الخصوصية وحماية البيانات (Privacy)</h3>
+                        
+                        <p><strong>المشكلة:</strong> الذكاء الاصطناعي يحتاج لبيانات ضخمة، مما يثير مخاوف حول الخصوصية.</p>
+
+                        <p><strong>مخاطر:</strong></p>
+                        <ul>
+                            <li>جمع بيانات شخصية دون إذن واضح</li>
+                            <li>استخدام البيانات لأغراض غير معلنة</li>
+                            <li>تسريب أو سرقة البيانات</li>
+                            <li>تتبع دائم للسلوك والموقع</li>
+                        </ul>
+
+                        <p><strong>ما يجب فعله:</strong></p>
+                        <ul>
+                            <li><strong>للمطورين:</strong> تطبيق مبدأ "الحد الأدنى من البيانات" - جمع فقط ما هو ضروري</li>
+                            <li><strong>للمستخدمين:</strong> اقرأ سياسات الخصوصية، واختر أدوات تحترم بياناتك</li>
+                            <li><strong>للشركات:</strong> الشفافية الكاملة حول استخدام البيانات والحصول على موافقة صريحة</li>
+                            <li><strong>للحكومات:</strong> قوانين صارمة مثل GDPR لحماية بيانات المواطنين</li>
+                        </ul>
+
+                        <h3>3. 📜 الشفافية والمساءلة (Transparency & Accountability)</h3>
+                        
+                        <p><strong>المشكلة:</strong> العديد من أنظمة الذكاء الاصطناعي "صناديق سوداء" - لا نعرف كيف تتخذ القرارات.</p>
+
+                        <p><strong>لماذا مهم؟</strong></p>
+                        <ul>
+                            <li>القرارات المهمة (طبية، قانونية، مالية) تحتاج للشرح</li>
+                            <li>المستخدمون لهم الحق في معرفة كيف تُتخذ القرارات عنهم</li>
+                            <li>ضرورة تحديد المسؤول عند حدوث خطأ</li>
+                        </ul>
+
+                        <p><strong>الحلول:</strong></p>
+                        <ul>
+                            <li><strong>الذكاء الاصطناعي القابل للتفسير (XAI):</strong> أنظمة تشرح قراراتها</li>
+                            <li><strong>التدقيق الدوري:</strong> فحص مستقل لضمان العدالة</li>
+                            <li><strong>وضوح المسؤوليات:</strong> تحديد من المسؤول عن أخطاء النظام</li>
+                        </ul>
+
+                        <h3>4. 🎨 حقوق الملكية الفكرية (Intellectual Property)</h3>
+                        
+                        <p><strong>المشكلة:</strong> الذكاء الاصطناعي يتدرب على محتوى مبدعين، ويولد محتوى جديد. من يملك الحقوق؟</p>
+
+                        <p><strong>قضايا ساخنة:</strong></p>
+                        <ul>
+                            <li><strong>الفن التوليدي:</strong> هل يحق لـ Midjourney استخدام أعمال فنانين دون إذن؟</li>
+                            <li><strong>الكتابة:</strong> إذا استخدمت ChatGPT، من يملك النص الناتج؟</li>
+                            <li><strong>الموسيقى:</strong> توليد موسيقى بأسلوب فنان معين - هل هذا قانوني؟</li>
+                            <li><strong>الكود البرمجي:</strong> GitHub Copilot يتدرب على كود مفتوح المصدر - هل هذا عادل؟</li>
+                        </ul>
+
+                        <p><strong>النقاش الدائر:</strong></p>
+                        <ul>
+                            <li><strong>المبدعون:</strong> يطالبون بتعويض عن استخدام أعمالهم</li>
+                            <li><strong>شركات الذكاء الاصطناعي:</strong> تدعي أن التدريب على بيانات عامة قانوني (Fair Use)</li>
+                            <li><strong>القانون:</strong> لا يزال يحاول اللحاق بالتكنولوجيا</li>
+                        </ul>
+
+                        <p><strong>ما يمكنك فعله:</strong></p>
+                        <ul>
+                            <li>استخدم أدوات تحترم حقوق الملكية (مثل Adobe Firefly)</li>
+                            <li>امنح الائتمان للمصادر الأصلية عند الإمكان</li>
+                            <li>لا تدعي ملكية محتوى ولّده الذكاء الاصطناعي دون تعديل كبير</li>
+                        </ul>
+
+                        <h3>5. 🤖 الاستخدام الضار (Malicious Use)</h3>
+                        
+                        <p><strong>المخاطر:</strong></p>
+                        <ul>
+                            <li><strong>Deepfakes:</strong> فيديوهات مزيفة واقعية لتشويه السمعة أو الاحتيال</li>
+                            <li><strong>المعلومات المضللة:</strong> توليد أخبار كاذبة بكميات هائلة</li>
+                            <li><strong>الهجمات السيبرانية:</strong> استخدام الذكاء الاصطناعي لاختراق أنظمة</li>
+                            <li><strong>التلاعب النفسي:</strong> إنشاء محتوى مخصص للتلاعب بالرأي العام</li>
+                            <li><strong>الأسلحة المستقلة:</strong> أنظمة عسكرية تتخذ قرارات دون تدخل بشري</li>
+                        </ul>
+
+                        <p><strong>الحماية:</strong></p>
+                        <ul>
+                            <li><strong>تقنيًا:</strong> أنظمة كشف Deepfakes، علامات مائية رقمية</li>
+                            <li><strong>قانونيًا:</strong> عقوبات صارمة للاستخدام الضار</li>
+                            <li><strong>اجتماعيًا:</strong> توعية الجمهور بمخاطر المحتوى المزيف</li>
+                            <li><strong>أخلاقيًا:</strong> رفض تطوير تقنيات يمكن استغلالها بسهولة</li>
+                        </ul>
+
+                        <h3>6. 👥 التأثير الاجتماعي والاقتصادي (Social Impact)</h3>
+                        
+                        <p><strong>القضايا:</strong></p>
+                        <ul>
+                            <li><strong>فقدان الوظائف:</strong> الأتمتة قد تؤدي لبطالة واسعة</li>
+                            <li><strong>الفجوة الرقمية:</strong> من لا يستطيع الوصول للتكنولوجيا يتخلف</li>
+                            <li><strong>التركيز على السلطة:</strong> شركات قليلة تتحكم بالتكنولوجيا</li>
+                            <li><strong>التبعية التكنولوجية:</strong> الاعتماد المفرط يضعف المهارات البشرية</li>
+                        </ul>
+
+                        <p><strong>الحلول المقترحة:</strong></p>
+                        <ul>
+                            <li>برامج إعادة تأهيل للعمال المتأثرين</li>
+                            <li>تعليم مهارات الذكاء الاصطناعي للجميع</li>
+                            <li>دعم حكومي للمتأثرين بالأتمتة</li>
+                            <li>تنظيم لمنع احتكار التكنولوجيا</li>
+                        </ul>
+
+                        <h2>📋 مبادئ الاستخدام الأخلاقي</h2>
+
+                        <h3>للمطورين والشركات:</h3>
+                        <ol>
+                            <li><strong>الشفافية:</strong> وضح كيف يعمل نظامك وما البيانات التي يستخدمها</li>
+                            <li><strong>العدالة:</strong> اختبر نظامك على بيانات متنوعة وتأكد من عدم التحيز</li>
+                            <li><strong>الخصوصية:</strong> احترم بيانات المستخدمين واحمها بقوة</li>
+                            <li><strong>المساءلة:</strong> تحمل المسؤولية عن أخطاء النظام</li>
+                            <li><strong>السلامة:</strong> اختبر تأثيرات النظام قبل النشر</li>
+                            <li><strong>الاستدامة:</strong> قلل من البصمة البيئية لأنظمتك</li>
+                        </ol>
+
+                        <h3>للمستخدمين:</h3>
+                        <ol>
+                            <li><strong>التحقق:</strong> لا تثق عمياً بمخرجات الذكاء الاصطناعي</li>
+                            <li><strong>الاحترام:</strong> لا تستخدم الذكاء الاصطناعي لأغراض ضارة</li>
+                            <li><strong>الوعي:</strong> افهم حدود وقدرات الأدوات التي تستخدمها</li>
+                            <li><strong>الخصوصية:</strong> كن حذرًا بشأن البيانات التي تشاركها</li>
+                            <li><strong>الائتمان:</strong> اذكر إذا كان المحتوى مولدًا بالذكاء الاصطناعي</li>
+                        </ol>
+
+                        <div class="highlight-box">
+                            <p><strong>🌟 القاعدة الذهبية:</strong> استخدم الذكاء الاصطناعي بالطريقة التي تحب أن يُستخدم بها معك ومع من تحب. إذا كان استخدامك سيضر بشخص أو مجموعة، فلا تفعل ذلك.</p>
+                        </div>
+
+                        <h2>🌍 مبادرات عالمية للأخلاقيات</h2>
+
+                        <h3>مبادئ UNESCO للأخلاقيات:</h3>
+                        <ul>
+                            <li>احترام حقوق الإنسان والكرامة</li>
+                            <li>تعزيز التنوع والشمولية</li>
+                            <li>حماية البيئة والاستدامة</li>
+                            <li>الشفافية والمساءلة</li>
+                        </ul>
+
+                        <h3>قوانين وتنظيمات:</h3>
+                        <ul>
+                            <li><strong>الاتحاد الأوروبي:</strong> قانون الذكاء الاصطناعي (AI Act) - تصنيف المخاطر وتنظيم الاستخدام</li>
+                            <li><strong>الصين:</strong> قوانين صارمة حول البيانات والخوارزميات</li>
+                            <li><strong>الولايات المتحدة:</strong> مبادرات على مستوى الولايات وأوامر تنفيذية</li>
+                        </ul>
+
+                        <h2>🎓 كيف تكون مستخدمًا أخلاقيًا؟</h2>
+
+                        <h3>قائمة تحقق سريعة قبل استخدام الذكاء الاصطناعي:</h3>
+                        <ul>
+                            <li>✅ هل استخدامي يحترم خصوصية الآخرين؟</li>
+                            <li>✅ هل سأتحقق من دقة المعلومات قبل استخدامها؟</li>
+                            <li>✅ هل سأمنح الائتمان عند الضرورة؟</li>
+                            <li>✅ هل استخدامي عادل ولا يضر أحدًا؟</li>
+                            <li>✅ هل أنا شفاف حول استخدام الذكاء الاصطناعي؟</li>
+                        </ul>
+
+                        <h3>أمثلة على الاستخدام الأخلاقي:</h3>
+                        <ul>
+                            <li><strong>في التعليم:</strong> استخدم ChatGPT للفهم والشرح، لا للغش</li>
+                            <li><strong>في العمل:</strong> استخدمه لتعزيز إنتاجيتك، لا لخداع الإدارة</li>
+                            <li><strong>في الإبداع:</strong> استخدمه كأداة إلهام، لا كبديل كامل للإبداع</li>
+                            <li><strong>في البحث:</strong> استخدمه كنقطة بداية، واذكر مصادرك</li>
+                        </ul>
+
+                        <h2>🔮 مستقبل الأخلاقيات</h2>
+
+                        <p>كلما تطور الذكاء الاصطناعي، ستظهر قضايا أخلاقية جديدة:</p>
+                        <ul>
+                            <li><strong>الوعي الاصطناعي:</strong> إذا أصبح الذكاء الاصطناعي واعيًا، ما حقوقه؟</li>
+                            <li><strong>القرارات الحياتية:</strong> هل يجب أن يتخذ الذكاء الاصطناعي قرارات حياة أو موت؟</li>
+                            <li><strong>تحسين البشر:</strong> استخدام الذكاء الاصطناعي لتعزيز القدرات البشرية - أين الحد؟</li>
+                            <li><strong>الهوية الرقمية:</strong> كيف نحمي هويتنا في عصر Deepfakes؟</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <p><strong>💭 خلاصة نهائية:</strong> الذكاء الاصطناعي أداة قوية يمكن أن تخدم البشرية أو تضرها. الخيار لنا. باستخدامه بشكل أخلاقي ومسؤول، يمكننا بناء مستقبل أفضل وأكثر عدلاً للجميع.</p>
+                            <p><strong>الأخلاقيات ليست عائقًا أمام الابتكار، بل هي ضمان لاستدامته ونجاحه.</strong></p>
+                        </div>
+
+                        <h2>📚 موارد إضافية</h2>
+                        <ul>
+                            <li>Partnership on AI - مبادرات أخلاقية من كبرى الشركات</li>
+                            <li>AI Ethics Lab - أبحاث ودراسات حول الأخلاقيات</li>
+                            <li>IEEE Ethics Standards - معايير دولية للأخلاقيات</li>
+                            <li>Future of Humanity Institute - أبحاث حول مستقبل الذكاء الاصطناعي</li>
+                        </ul>
+
+                        <p style="text-align: center; margin-top: 3rem; font-size: 1.2rem;"><strong>🌟 معًا نبني مستقبلاً أخلاقيًا للذكاء الاصطناعي! 🌟</strong></p>
+                    </div>
+                `
+            }
+        };
+
+        // Show Article Function
+        function showArticle(articleId) {
+            const article = articles[articleId];
+            if (!article) return;
+            
+            document.getElementById('articleContent').innerHTML = article.content;
+            document.getElementById('articlesSection').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            window.scrollTo(0, 0);
+        }
+
+        // Close Article Function
+        function closeArticle() {
+            document.getElementById('articlesSection').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on Escape Key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeArticle();
+            }
+        });
+    </script>
+</body>
+</html>
